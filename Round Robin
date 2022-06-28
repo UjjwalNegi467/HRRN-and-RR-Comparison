@@ -1,0 +1,21 @@
+The Round Robin algorithm is a simple scheduling algorithm and is most used in time shared systems.
+Each process is given a time interval called quantum time, as long as the process is in quantum time,
+allowed to run . This algorithm selects the process from the front row and runs the process during the
+given quantum time. The new process will be added to the back ready queue. 
+
+PsuedoCode :
+Initial ready_queue process, Arival_Time, Burst_Time,
+Quantum_Time
+while(ready_queue != null)
+Execute task in Round Robin manner
+If(Burst_time of task > Quantum_time)
+If(other task on ready_queue during interval CPU time)
+Put recent task after other task in ready_queue
+else
+Put recent task on ready_queue
+else
+go to other task in ready_queue
+end while
+computer Average waiting time
+compute Average completion time
+
