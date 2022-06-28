@@ -1,0 +1,22 @@
+The Highest Response Ratio Next algorithm (HRRN) is an algorithm whose priority for each job depends
+on the estimated running time, and based on the amount of time spent waiting . Jobs get higher priority
+the longer the work is postponed (starvation process). Even long jobs are delayed by CPUs competing
+with jobs that are estimated to have a short period of time.
+
+Pseudocode :
+Initial ready_queue process, Arival_Time, Burst_Time, Ratio,
+time_spent_waiting, Highest_Ration, Index_Highest_Ratio
+While (ready_queue != null)
+Execute task in Highest Response Ration Next manner
+Check other task in ready queue
+Do i to amount of task in ready_queue
+Time_spent_waiting = Max interval time now – Arival_time of task[i]
+Ratio task[i] = (time_spent_waiting + burst_time of task[i]) / burst_time of task[i]
+if(ratio task[i] > Highest_Ratio)
+Highest_ratio = Ratio task[i]
+Index_Highest_Ratio = i
+End Do
+Go to task[Index_Highest_Ratio]
+End While
+Compute Average waiting time
+Compute Average Turn Around Time
